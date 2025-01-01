@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GasTech - Leading Industrial Gas Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(120deg, #1E3A8A, #1E40AF);
+        }
+        .value-card {
+            transition: all 0.3s ease;
+        }
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #1E40AF;
+            border: 4px solid white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center">
+                        <i class="fas fa-fire text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-gray-900">GasTech</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-blue-900">About</a>
+                    <a href="#leadership" class="text-gray-600 hover:text-blue-900">Leadership</a>
+                    <a href="#history" class="text-gray-600 hover:text-blue-900">History</a>
+                    <a href="#careers" class="text-gray-600 hover:text-blue-900">Careers</a>
+                </div>
+                <button class="gradient-bg text-white px-6 py-2 rounded-lg hover:opacity-90 transition-opacity">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h1 class="text-5xl font-bold mb-6">
+                        Powering Industry Through Innovation
+                    </h1>
+                    <p class="text-xl text-blue-100 mb-8">
+                        GasTech has been at the forefront of industrial gas solutions for over three decades, serving businesses worldwide with reliability and excellence.
+                    </p>
+                    <button class="bg-white text-blue-900 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
+                        Learn Our Story
+                    </button>
+                </div>
+                <div class="relative" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3" alt="Corporate Office" class="rounded-xl shadow-2xl">
+                    <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-xl">
+                        <p class="text-blue-900 font-bold">Global Presence</p>
+                        <p class="text-gray-600">30+ Countries</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4" data-aos="fade-up">Who We Are</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    GasTech is a global leader in industrial gas solutions, committed to innovation, sustainability, and excellence in service delivery.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="value-card p-6 bg-white rounded-xl shadow-lg" data-aos="fade-up">
+                    <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-lightbulb text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Innovation</h3>
+                    <p class="text-gray-600">Pioneering new technologies and solutions in industrial gas management.</p>
+                </div>
+                <div class="value-card p-6 bg-white rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-leaf text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Sustainability</h3>
+                    <p class="text-gray-600">Committed to environmental responsibility and sustainable practices.</p>
+                </div>
+                <div class="value-card p-6 bg-white rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-handshake text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Partnership</h3>
+                    <p class="text-gray-600">Building long-lasting relationships with our clients and stakeholders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section id="leadership" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4" data-aos="fade-up">Our Leadership</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    Meet the team driving innovation and excellence at GasTech.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up">
+                    <img src="https://placehold.co/400x300" alt="CEO" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">John Smith</h3>
+                        <p class="text-blue-900 mb-4">Chief Executive Officer</p>
+                        <p class="text-gray-600">20+ years of experience in industrial gas solutions.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://placehold.co/400x300" alt="CTO" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Sarah Johnson</h3>
+                        <p class="text-blue-900 mb-4">Chief Technology Officer</p>
+                        <p class="text-gray-600">Leading technological innovation and digital transformation.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://placehold.co/400x300" alt="COO" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Michael Chen</h3>
+                        <p class="text-blue-900 mb-4">Chief Operations Officer</p>
+                        <p class="text-gray-600">Expertise in global operations and supply chain management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section id="history" class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4" data-aos="fade-up">Our Journey</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    Three decades of innovation and growth in the industrial gas sector.
+                </p>
+            </div>
+            <div class="relative">
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-blue-200"></div>
+                <div class="space-y-12">
+                    <div class="relative pl-8 md:pl-0 md:grid md:grid-cols-2 md:gap-12 items-center" data-aos="fade-up">
+                        <div class="md:text-right md:pr-8 timeline-item">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">1990</h3>
+                            <p class="text-gray-600">Founded as a local gas supplier in California.</p>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div class="relative pl-8 md:pl-0 md:grid md:grid-cols-2 md:gap-12 items-center" data-aos="fade-up">
+                        <div></div>
+                        <div class="md:pl-8 timeline-item">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">2000</h3>
+                            <p class="text-gray-600">Expanded operations nationwide with innovative delivery systems.</p>
+                        </div>
+                    </div>
+                    <div class="relative pl-8 md:pl-0 md:grid md:grid-cols-2 md:gap-12 items-center" data-aos="fade-up">
+                        <div class="md:text-right md:pr-8 timeline-item">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">2010</h3>
+                            <p class="text-gray-600">Launched global operations and digital transformation initiative.</p>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div class="relative pl-8 md:pl-0 md:grid md:grid-cols-2 md:gap-12 items-center" data-aos="fade-up">
+                        <div></div>
+                        <div class="md:pl-8 timeline-item">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">2024</h3>
+                            <p class="text-gray-600">Leading the industry with AI-powered gas management solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section id="careers" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4" data-aos="fade-up">Join Our Team</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    Be part of a team that's shaping the future of industrial gas technology.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Why Join GasTech?</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-900 mt-1 mr-3"></i>
+                            <p class="text-gray-600">Innovative work environment with cutting-edge technologies</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-900 mt-1 mr-3"></i>
+                            <p class="text-gray-600">Competitive compensation and benefits package</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-900 mt-1 mr-3"></i>
+                            <p class="text-gray-600">Professional development and growth opportunities</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-900 mt-1 mr-3"></i>
+                            <p class="text-gray-600">Global exposure and collaborative team environment</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Open Positions</h3>
+                    <div class="space-y-4">
+                        <a href="#" class="block p-4 border border-gray-200 rounded-lg hover:border-blue-900 transition-colors">
+                            <h4 class="font-bold text-gray-900">Senior Software Engineer</h4>
+                            <p class="text-gray-600">San Francisco, CA</p>
+                        </a>
+                        <a href="#" class="block p-4 border border-gray-200 rounded-lg hover:border-blue-900 transition-colors">
+                            <h4 class="font-bold text-gray-900">Product Manager</h4>
+                            <p class="text-gray-600">New York, NY</p>
+                        </a>
+                        <a href="#" class="block p-4 border border-gray-200 rounded-lg hover:border-blue-900 transition-colors">
+                            <h4 class="font-bold text-gray-900">Operations Specialist</h4>
+                            <p class="text-gray-600">Chicago, IL</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-blue-900 rounded-2xl p-12 text-center text-white" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Ready to Connect?</h2>
+                <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                    Get in touch with our team to learn more about career opportunities or business partnerships.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button class="bg-white text-blue-900 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors text-lg font-bold">
+                        Contact Us
+                    </button>
+                    <button class="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-blue-800 transition-colors text-lg font-bold">
+                        View Openings
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">GasTech</h3>
+                    <p class="text-gray-400">Leading the future of industrial gas solutions.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#leadership" class="text-gray-400 hover:text-white">Leadership</a></li>
+                        <li><a href="#careers" class="text-gray-400 hover:text-white">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">News</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Press Kit</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>© 2024 GasTech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+</html>

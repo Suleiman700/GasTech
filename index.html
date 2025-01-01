@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GasTech - Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        * {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(120deg, #6366f1, #8b5cf6, #d946ef);
+            background-size: 200% 200%;
+            animation: gradientBG 15s ease infinite;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .blob {
+            position: absolute;
+            filter: blur(80px);
+            opacity: 0.4;
+            z-index: 0;
+            animation: blobAnimation 10s infinite alternate;
+        }
+        @keyframes blobAnimation {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(50px, 20px) scale(1.1); }
+        }
+        .card {
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        .card-image-container {
+            position: relative;
+            width: 100%;
+            padding-top: 66.67%; /* 3:2 aspect ratio */
+            overflow: hidden;
+        }
+        .card-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+        }
+        .card-content {
+            opacity: 1;
+            transform: none;
+            background: transparent;
+            position: relative;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-gray-900/80 backdrop-blur-lg border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center">
+                        <i class="fas fa-fire text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-white">GasTech</span>
+                </a>
+                <button class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-2 rounded-xl hover:opacity-90 transition-opacity">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-[60vh] relative overflow-hidden pt-20">
+        <!-- Background Blobs -->
+        <div class="blob bg-indigo-500 w-96 h-96 top-0 left-0"></div>
+        <div class="blob bg-purple-500 w-96 h-96 bottom-0 right-0"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 py-20 relative z-10">
+            <div class="text-center">
+                <h1 class="text-6xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
+                        GasTech Showcase
+                    </span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Explore our collection of modern, responsive pages designed to showcase the future of industrial gas technology.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Cards -->
+    <section class="py-20 relative z-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Home 1 Card -->
+                <a href="home-1.html" class="card relative rounded-xl overflow-hidden group">
+                    <div class="card-image-container">
+                        <img src="./assets/images/showcase/home-1.png" 
+                             alt="Home 1" 
+                             class="card-image">
+                    </div>
+                    <div class="card-content p-6">
+                        <h3 class="text-2xl font-bold mb-2">Home 1</h3>
+                        <p class="text-gray-400">Modern and professional design with a focus on clarity and impact.</p>
+                    </div>
+                </a>
+
+                <!-- Home 2 Card -->
+                <a href="home-2.html" class="card relative rounded-xl overflow-hidden group">
+                    <div class="card-image-container">
+                        <img src="./assets/images/showcase/home-2.png" 
+                             alt="Home 2"
+                             class="card-image">
+                    </div>
+                    <div class="card-content p-6">
+                        <h3 class="text-2xl font-bold mb-2">Home 2</h3>
+                        <p class="text-gray-400">Futuristic design with glass morphism and gradient effects.</p>
+                    </div>
+                </a>
+
+                <!-- Blog Card -->
+                <a href="blog.html" class="card relative rounded-xl overflow-hidden group">
+                    <div class="card-image-container">
+                        <img src="./assets/images/showcase/blog.png" 
+                             alt="Blog"
+                             class="card-image">
+                    </div>
+                    <div class="card-content p-6">
+                        <h3 class="text-2xl font-bold mb-2">Blog</h3>
+                        <p class="text-gray-400">Stay updated with our latest news and insights.</p>
+                    </div>
+                </a>
+
+                <!-- Services Card -->
+                <a href="services.html" class="card relative rounded-xl overflow-hidden group">
+                    <div class="card-image-container">
+                        <img src="./assets/images/showcase/services.png" 
+                                alt="Services"
+                                class="card-image">
+                    </div>
+                    <div class="card-content p-6">
+                        <h3 class="text-2xl font-bold mb-2">Services</h3>
+                        <p class="text-gray-400">Explore our comprehensive range of industrial solutions.</p>
+                    </div>
+                </a>
+
+                <!-- Marketing Card -->
+                <a href="marketing.html" class="card relative rounded-xl overflow-hidden group">
+                    <div class="card-image-container">
+                        <img src="./assets/images/showcase/marketing.png" 
+                                alt="Marketing"
+                                class="card-image">
+                    </div>
+                    <div class="card-content p-6">
+                        <h3 class="text-2xl font-bold mb-2">Marketing</h3>
+                        <p class="text-gray-400">Modern marketing page with features and pricing showcase.</p>
+                    </div>
+                </a>
+
+                <!-- Corporate Card -->
+                <a href="corporate.html" class="card relative rounded-xl overflow-hidden group">
+                    <div class="card-image-container">
+                        <img src="./assets/images/showcase/corporate.png" 
+                                alt="Corporate"
+                                class="card-image">
+                    </div>
+                    <div class="card-content p-6">
+                        <h3 class="text-2xl font-bold mb-2">Corporate</h3>
+                        <p class="text-gray-400">Professional corporate page with company information.</p>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center text-gray-400">
+                <p> 2024 GasTech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize ScrollReveal
+        ScrollReveal().reveal('.card', {
+            delay: 200,
+            distance: '20px',
+            origin: 'bottom',
+            interval: 100
+        });
+    </script>
+</body>
+</html>

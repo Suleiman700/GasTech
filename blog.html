@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GasTech - Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        .blog-card {
+            transition: all 0.3s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .category-btn {
+            transition: all 0.3s ease;
+        }
+        .category-btn:hover {
+            transform: translateY(-2px);
+        }
+        .category-btn.active {
+            background-color: #2563eb;
+            color: white;
+        }
+        .blog-image {
+            transition: all 0.5s ease;
+        }
+        .blog-card:hover .blog-image {
+            transform: scale(1.05);
+        }
+        .gradient-overlay {
+            background: linear-gradient(to bottom, rgba(37,99,235,0.9), rgba(30,64,175,0.95));
+        }
+        .search-input {
+            transition: all 0.3s ease;
+        }
+        .search-input:focus {
+            box-shadow: 0 0 0 3px rgba(37,99,235,0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <i class="fas fa-fire text-blue-600 text-2xl"></i>
+                    <span class="text-xl font-bold text-gray-800">GasTech</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600">Home</a>
+                    <a href="landing.html" class="text-gray-600 hover:text-blue-600">Landing</a>
+                    <a href="blog.html" class="text-blue-600">Blog</a>
+                    <a href="services.html" class="text-gray-600 hover:text-blue-600">Services</a>
+                </div>
+                <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <header class="relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3" 
+                 alt="Header Background" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 gradient-overlay"></div>
+        </div>
+        <div class="relative z-10 pt-32 pb-20 px-4">
+            <div class="max-w-7xl mx-auto text-center text-white">
+                <h1 class="text-5xl font-bold mb-6">GasTech Blog</h1>
+                <p class="text-xl text-blue-100 mb-8">Stay updated with the latest news and insights from the gas industry</p>
+                <div class="max-w-xl mx-auto">
+                    <div class="relative">
+                        <input type="text" 
+                               id="searchInput"
+                               placeholder="Search articles..." 
+                               class="w-full px-6 py-3 rounded-full bg-white bg-opacity-20 backdrop-blur-sm text-white placeholder-blue-100 border border-white border-opacity-30 focus:outline-none search-input">
+                        <i class="fas fa-search absolute right-6 top-1/2 transform -translate-y-1/2 text-blue-100"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Categories -->
+    <div class="bg-white shadow-md sticky top-16 z-40">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex overflow-x-auto py-4 space-x-4 scrollbar-hide">
+                <button class="category-btn px-6 py-2 rounded-full bg-blue-600 text-white" data-category="all">All Posts</button>
+                <button class="category-btn px-6 py-2 rounded-full bg-gray-100 hover:bg-gray-200" data-category="industry">Industry News</button>
+                <button class="category-btn px-6 py-2 rounded-full bg-gray-100 hover:bg-gray-200" data-category="technology">Technology</button>
+                <button class="category-btn px-6 py-2 rounded-full bg-gray-100 hover:bg-gray-200" data-category="safety">Safety</button>
+                <button class="category-btn px-6 py-2 rounded-full bg-gray-100 hover:bg-gray-200" data-category="innovation">Innovation</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Post -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="relative overflow-hidden h-96 md:h-auto">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3" 
+                             alt="Featured Post" 
+                             class="w-full h-full object-cover blog-image">
+                    </div>
+                    <div class="p-8 flex flex-col justify-center">
+                        <span class="text-blue-600 font-semibold mb-4">Featured Article</span>
+                        <h2 class="text-3xl font-bold mb-4">The Evolution of Industrial Gas Technology</h2>
+                        <p class="text-gray-600 mb-6">Discover how modern technology is revolutionizing the industrial gas sector, improving efficiency, safety, and sustainability.</p>
+                        <div class="flex items-center mb-6">
+                            <img src="https://i.pravatar.cc/40?img=1" alt="Author" class="w-10 h-10 rounded-full">
+                            <div class="ml-4">
+                                <p class="font-semibold">John Doe</p>
+                                <p class="text-sm text-gray-500">Dec 20, 2024 • 8 min read</p>
+                            </div>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
+                            Read Full Article 
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="blogPosts">
+                <!-- Blog posts will be dynamically populated here -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button id="loadMoreBtn" class="px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-300">
+                    Load More Articles
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-blue-600 rounded-2xl p-12 relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10">
+                    <div class="absolute inset-0 bg-pattern"></div>
+                </div>
+                <div class="relative z-10 text-center">
+                    <h2 class="text-3xl font-bold text-white mb-4">Subscribe to Our Newsletter</h2>
+                    <p class="text-blue-100 mb-8 text-lg">Get the latest industry insights delivered straight to your inbox</p>
+                    <form class="max-w-xl mx-auto flex flex-col md:flex-row gap-4">
+                        <input type="email" 
+                               placeholder="Enter your email" 
+                               class="flex-1 px-6 py-3 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        <button type="submit" 
+                                class="bg-white text-blue-600 px-8 py-3 rounded-full hover:bg-gray-100 transition duration-300 font-medium">
+                            Subscribe
+                        </button>
+                    </form>
+                    <p class="text-blue-100 text-sm mt-4">We respect your privacy. Unsubscribe at any time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Blog post data
+        const blogPosts = [
+            {
+                image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3',
+                date: 'Dec 15, 2024',
+                readTime: '5 min read',
+                title: 'The Future of Industrial Gas Supply',
+                description: 'Exploring the latest innovations in industrial gas supply chain management and technology.',
+                category: 'technology',
+                author: {
+                    name: 'Sarah Johnson',
+                    avatar: 'https://i.pravatar.cc/40?img=2'
+                }
+            },
+            {
+                image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3',
+                date: 'Dec 10, 2024',
+                readTime: '4 min read',
+                title: 'Safety First: Best Practices in Gas Handling',
+                description: 'Essential safety protocols and best practices for handling industrial gases.',
+                category: 'safety',
+                author: {
+                    name: 'Mike Wilson',
+                    avatar: 'https://i.pravatar.cc/40?img=3'
+                }
+            },
+            {
+                image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3',
+                date: 'Dec 5, 2024',
+                readTime: '6 min read',
+                title: 'Sustainable Gas Solutions for Modern Industry',
+                description: 'How modern industries are adopting sustainable gas solutions for a greener future.',
+                category: 'industry',
+                author: {
+                    name: 'Emma Davis',
+                    avatar: 'https://i.pravatar.cc/40?img=4'
+                }
+            },
+            {
+                image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3',
+                date: 'Dec 1, 2024',
+                readTime: '7 min read',
+                title: 'Innovation in Gas Distribution',
+                description: 'New technologies reshaping the gas distribution landscape.',
+                category: 'innovation',
+                author: {
+                    name: 'Alex Thompson',
+                    avatar: 'https://i.pravatar.cc/40?img=5'
+                }
+            }
+        ];
+
+        // Function to create blog post HTML
+        function createBlogPost(post) {
+            return `
+                <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="${post.category}">
+                    <div class="relative overflow-hidden">
+                        <img src="${post.image}" 
+                             alt="${post.title}" 
+                             class="w-full h-48 object-cover blog-image">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+                            ${post.category}
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="${post.author.avatar}" alt="${post.author.name}" class="w-8 h-8 rounded-full">
+                            <div class="ml-3">
+                                <p class="text-sm font-medium">${post.author.name}</p>
+                                <p class="text-xs text-gray-500">${post.date} • ${post.readTime}</p>
+                            </div>
+                        </div>
+                        <h2 class="text-xl font-bold mb-2">${post.title}</h2>
+                        <p class="text-gray-600 mb-4">${post.description}</p>
+                        <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
+                            Read More 
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+            `;
+        }
+
+        // Function to filter blog posts
+        function filterPosts(category) {
+            const posts = document.querySelectorAll('.blog-card');
+            posts.forEach(post => {
+                if (category === 'all' || post.dataset.category === category) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        }
+
+        // Initialize blog posts
+        function initializeBlogPosts() {
+            const container = document.getElementById('blogPosts');
+            blogPosts.forEach(post => {
+                container.innerHTML += createBlogPost(post);
+            });
+        }
+
+        // Add event listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeBlogPosts();
+
+            // Category filter buttons
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    // Filter posts
+                    filterPosts(button.dataset.category);
+                });
+            });
+
+            // Search functionality
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                const posts = document.querySelectorAll('.blog-card');
+                posts.forEach(post => {
+                    const title = post.querySelector('h2').textContent.toLowerCase();
+                    const description = post.querySelector('p').textContent.toLowerCase();
+                    if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                        post.style.display = 'block';
+                    } else {
+                        post.style.display = 'none';
+                    }
+                });
+            });
+
+            // Load More button
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            loadMoreBtn.addEventListener('click', () => {
+                // Add more posts logic here
+                alert('More posts loading feature will be implemented here');
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">GasTech</h3>
+                    <p class="text-gray-400">Leading the future of gas supply technology.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Email: info@example.com</li>
+                        <li>Phone: XX-XXXXXXX</li>
+                        <li>Address: Israel</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p> 2024 GasTech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GasTech - Modern Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #3B82F6, #2563EB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1E40AF, #3B82F6);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+        }
+        .bg-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .stats-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .scroll-down {
+            animation: scrollDown 2s ease-in-out infinite;
+        }
+        @keyframes scrollDown {
+            0% { transform: translateY(0); opacity: 1; }
+            50% { transform: translateY(10px); opacity: 0.5; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-90 backdrop-blur-lg border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <i class="fas fa-fire text-blue-500 text-2xl"></i>
+                    <span class="text-xl font-bold">GasTech</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-white transition">Home</a>
+                    <a href="#features" class="text-gray-300 hover:text-white transition">Features</a>
+                    <a href="#about" class="text-gray-300 hover:text-white transition">About</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white transition">Contact</a>
+                </div>
+                <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen relative overflow-hidden bg-pattern">
+        <div class="absolute inset-0 bg-gradient-to-b from-blue-900/50 to-gray-900"></div>
+        <div class="max-w-7xl mx-auto px-4 pt-32 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center min-h-[80vh]">
+                <div>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                        Transform Your 
+                        <span class="gradient-text" id="typed-text"></span>
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-8">Advanced solutions for modern industries. Experience the future of gas supply with GasTech.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition duration-300">
+                            Get Started
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-blue-600 transition duration-300">
+                            Learn More
+                        </button>
+                    </div>
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-4 mt-12">
+                        <div class="stats-card rounded-xl p-4 text-center">
+                            <h3 class="text-3xl font-bold mb-2" id="clients-count">0</h3>
+                            <p class="text-gray-400">Clients</p>
+                        </div>
+                        <div class="stats-card rounded-xl p-4 text-center">
+                            <h3 class="text-3xl font-bold mb-2" id="projects-count">0</h3>
+                            <p class="text-gray-400">Projects</p>
+                        </div>
+                        <div class="stats-card rounded-xl p-4 text-center">
+                            <h3 class="text-3xl font-bold mb-2" id="satisfaction-rate">0</h3>
+                            <p class="text-gray-400">Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-blue-600 rounded-full opacity-20 blur-3xl"></div>
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3" 
+                         alt="Modern Industry" 
+                         class="relative rounded-3xl shadow-2xl floating">
+                </div>
+            </div>
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
+                <p class="text-sm text-gray-400 mb-2">Scroll to explore</p>
+                <i class="fas fa-chevron-down scroll-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">Why Choose GasTech</h2>
+                <p class="text-xl text-gray-400">Experience the difference with our cutting-edge solutions</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card p-8 rounded-2xl">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Advanced Technology</h3>
+                    <p class="text-gray-400">State-of-the-art gas supply systems with smart monitoring capabilities.</p>
+                </div>
+                <div class="feature-card p-8 rounded-2xl">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Safety First</h3>
+                    <p class="text-gray-400">Industry-leading safety protocols and certified equipment.</p>
+                </div>
+                <div class="feature-card p-8 rounded-2xl">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">24/7 Support</h3>
+                    <p class="text-gray-400">Round-the-clock customer support and emergency services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">Our Journey to Excellence</h2>
+                    <p class="text-gray-400 mb-6">With years of experience in the industry, we've built a reputation for reliability, innovation, and exceptional service. Our commitment to quality and safety sets us apart.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-600/20 rounded-full flex items-center justify-center text-blue-500">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Quality Assurance</h4>
+                                <p class="text-gray-400">Rigorous testing and certification processes</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-600/20 rounded-full flex items-center justify-center text-blue-500">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Expert Team</h4>
+                                <p class="text-gray-400">Highly trained professionals at your service</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-600/20 rounded-full flex items-center justify-center text-blue-500">
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Modern Infrastructure</h4>
+                                <p class="text-gray-400">State-of-the-art facilities and equipment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-blue-600 rounded-full opacity-20 blur-3xl"></div>
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3" 
+                         alt="About Us" 
+                         class="relative rounded-3xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-12 relative overflow-hidden">
+                <div class="absolute inset-0 bg-pattern opacity-10"></div>
+                <div class="relative z-10">
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div>
+                            <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+                            <p class="text-blue-100 mb-8">Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                            <div class="space-y-4">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Location</h4>
+                                        <p class="text-blue-100">Israel</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Phone</h4>
+                                        <p class="text-blue-100">XX-XXXXXXX</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Email</h4>
+                                        <p class="text-blue-100">info@example.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="space-y-4">
+                            <input type="text" placeholder="Your Name" class="w-full px-6 py-3 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:border-white">
+                            <input type="email" placeholder="Your Email" class="w-full px-6 py-3 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:border-white">
+                            <textarea rows="4" placeholder="Your Message" class="w-full px-6 py-3 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:border-white"></textarea>
+                            <button type="submit" class="w-full bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">GasTech</h3>
+                    <p class="text-gray-400">Leading the future of gas supply technology.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Email: info@example.com</li>
+                        <li>Phone: XX-XXXXXXX</li>
+                        <li>Address: Israel</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p> 2024 GasTech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize ScrollReveal
+        ScrollReveal().reveal('.feature-card', {
+            delay: 200,
+            distance: '20px',
+            origin: 'bottom',
+            interval: 100
+        });
+
+        // Initialize Typed.js
+        new Typed('#typed-text', {
+            strings: ['Gas Supply Chain', 'Industrial Solutions', 'Business Growth'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+        });
+
+        // Animate statistics
+        function animateValue(id, start, end, duration) {
+            const obj = document.getElementById(id);
+            const range = end - start;
+            const increment = end > start ? 1 : -1;
+            const stepTime = Math.abs(Math.floor(duration / range));
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                obj.textContent = current;
+                if (current === end) {
+                    clearInterval(timer);
+                }
+            }, stepTime);
+        }
+
+        // Animate statistics when they come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateValue('clients-count', 0, 500, 2000);
+                    animateValue('projects-count', 0, 1000, 2000);
+                    animateValue('satisfaction-rate', 0, 98, 2000);
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        observer.observe(document.querySelector('.stats-card'));
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

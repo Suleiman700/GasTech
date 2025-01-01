@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GasTech - Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1E40AF, #3B82F6);
+        }
+        .pricing-card {
+            transition: all 0.3s ease;
+        }
+        .pricing-card:hover {
+            transform: scale(1.05);
+        }
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <i class="fas fa-fire text-blue-600 text-2xl"></i>
+                    <span class="text-xl font-bold text-gray-800">GasTech</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600">Home</a>
+                    <a href="landing.html" class="text-gray-600 hover:text-blue-600">Landing</a>
+                    <a href="blog.html" class="text-gray-600 hover:text-blue-600">Blog</a>
+                    <a href="services.html" class="text-blue-600">Services</a>
+                </div>
+                <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Header -->
+    <header class="gradient-bg text-white pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-4">Our Services</h1>
+            <p class="text-xl text-blue-100">Comprehensive gas solutions for every industry</p>
+        </div>
+    </header>
+
+    <!-- Main Services -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-6">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Industrial Gas Supply</h3>
+                    <p class="text-gray-600 mb-4">Reliable supply of industrial gases for manufacturing and production processes.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            24/7 delivery service
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Bulk storage solutions
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Quality assurance
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-6">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Equipment Installation</h3>
+                    <p class="text-gray-600 mb-4">Professional installation and maintenance of gas equipment and systems.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Expert technicians
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Regular maintenance
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Safety compliance
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-6">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Safety Consulting</h3>
+                    <p class="text-gray-600 mb-4">Expert guidance on gas safety protocols and compliance measures.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Risk assessment
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Safety training
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Compliance audits
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Process</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">1</div>
+                    <h3 class="font-bold mb-2">Consultation</h3>
+                    <p class="text-gray-600">Initial meeting to understand your needs</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">2</div>
+                    <h3 class="font-bold mb-2">Planning</h3>
+                    <p class="text-gray-600">Detailed solution design and proposal</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">3</div>
+                    <h3 class="font-bold mb-2">Implementation</h3>
+                    <p class="text-gray-600">Professional installation and setup</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">4</div>
+                    <h3 class="font-bold mb-2">Support</h3>
+                    <p class="text-gray-600">Ongoing maintenance and assistance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-gray-50 rounded-xl p-6 shadow-lg" data-aos="fade-up">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pravatar.cc/60?img=1" alt="Client" class="w-12 h-12 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="font-bold">John Smith</h4>
+                            <p class="text-gray-600">Industrial Manager</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"GasTech's service has been exceptional. Their team's expertise and prompt response have made our operations much more efficient."</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="testimonial-card bg-gray-50 rounded-xl p-6 shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pravatar.cc/60?img=2" alt="Client" class="w-12 h-12 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-gray-600">Factory Owner</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"The safety consulting services provided by GasTech have transformed our workplace safety standards. Highly recommended!"</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="testimonial-card bg-gray-50 rounded-xl p-6 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pravatar.cc/60?img=3" alt="Client" class="w-12 h-12 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <p class="text-gray-600">Production Director</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"The equipment installation team was professional and efficient. Our production line has never run smoother."</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Transparent Pricing</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="pricing-card bg-white rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in">
+                    <div class="p-6 bg-blue-600 text-white text-center">
+                        <h3 class="text-2xl font-bold">Basic</h3>
+                        <div class="mt-4">
+                            <span class="text-4xl font-bold">$299</span>
+                            <span class="text-sm">/month</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Basic gas supply
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Monthly maintenance
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Email support
+                            </li>
+                        </ul>
+                        <button class="w-full mt-6 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+
+                <div class="pricing-card bg-white rounded-xl shadow-lg overflow-hidden transform scale-105" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="p-6 bg-blue-700 text-white text-center">
+                        <h3 class="text-2xl font-bold">Professional</h3>
+                        <div class="mt-4">
+                            <span class="text-4xl font-bold">$599</span>
+                            <span class="text-sm">/month</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Premium gas supply
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Weekly maintenance
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                24/7 phone support
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Safety consulting
+                            </li>
+                        </ul>
+                        <button class="w-full mt-6 bg-blue-700 text-white py-2 rounded-lg hover:bg-blue-800 transition duration-300">
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+
+                <div class="pricing-card bg-white rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="p-6 bg-blue-600 text-white text-center">
+                        <h3 class="text-2xl font-bold">Enterprise</h3>
+                        <div class="mt-4">
+                            <span class="text-4xl font-bold">Custom</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Custom gas solutions
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Daily maintenance
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Dedicated support team
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Full safety program
+                            </li>
+                        </ul>
+                        <button class="w-full mt-6 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                            Contact Sales
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="faq-item bg-gray-50 rounded-xl p-6 shadow-md" data-aos="fade-up">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-semibold">What types of gases do you supply?</h3>
+                        <i class="fas fa-chevron-down text-blue-600"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600">
+                        We supply a wide range of industrial gases including nitrogen, oxygen, argon, carbon dioxide, and specialty gas mixtures. All our gases meet the highest industry standards.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-50 rounded-xl p-6 shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-semibold">How often do you perform maintenance?</h3>
+                        <i class="fas fa-chevron-down text-blue-600"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600">
+                        Maintenance frequency depends on your service plan. We offer monthly, weekly, and daily maintenance options. Our team can create a custom maintenance schedule based on your needs.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-50 rounded-xl p-6 shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-semibold">What safety measures do you implement?</h3>
+                        <i class="fas fa-chevron-down text-blue-600"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600">
+                        We follow strict safety protocols including regular safety audits, staff training, emergency response planning, and compliance with all relevant regulations. Our safety consulting team can help develop custom safety programs.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-blue-600 rounded-2xl p-12 text-center text-white">
+                <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+                <p class="text-xl text-blue-100 mb-8">Contact us today for a free consultation</p>
+                <button class="bg-white text-blue-600 px-8 py-3 rounded-full hover:bg-gray-100 transition duration-300">
+                    Contact Us Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">GasTech</h3>
+                    <p class="text-gray-400">Leading the future of gas supply technology.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Email: info@example.com</li>
+                        <li>Phone: XX-XXXXXXX</li>
+                        <li>Address: Israel</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p> 2024 GasTech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-item button').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                content.style.display = content.style.display === 'none' ? 'block' : 'none';
+                icon.classList.toggle('fa-chevron-up');
+                icon.classList.toggle('fa-chevron-down');
+            });
+        });
+    </script>
+</body>
+</html>
