@@ -1,5 +1,7 @@
 # GasTech - Modern Industrial Gas Company HTML Template Collection
 
+![img-1](https://github.com/user-attachments/assets/c251e3a3-eb41-4f6f-9236-3213d3fe7ccf)
+
 This document will help you get started with the template and guide you through the installation process.
 
 ## 📁 Package Contents
@@ -100,7 +102,6 @@ Need help? We're here for you!
 
 ## 🔄 Updates
 
-- Check your CodeCanyon downloads for updates
 - Follow our changelog in the documentation
 - Regular updates ensure compatibility with latest web standards
 
@@ -136,12 +137,6 @@ The template uses Tailwind CSS classes for styling. To modify colors:
 2. Minify CSS and JavaScript in production
 3. Enable browser caching
 4. Use a CDN for better performance
-
-## 📜 License
-
-- One license per domain
-- Read CodeCanyon's licensing terms
-- Contact us for multiple domain usage
 
 ## 🔐 Security
 
